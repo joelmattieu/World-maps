@@ -1,40 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Joel Mattieu, joelmattieu2016@gmail.com">
+    <meta name="description" content="Let's get discover our world! Through the maps, we will learn curiosities about our world and the people who inhabit it.">
+    <meta name="keywords" content="world, map, maps, worldmaps, geography, entertainment">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <title>Mapas del Mundo</title>
+    <script src="https://kit.fontawesome.com/0c8240baec.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="media/icon-logo.png" type="image/x-icon">
+    <title>World Maps</title>
 </head>
 <body>
-    <header>
+    <header id="inicio">
         <div class="container">
             <div class="logo">
-                <img src="#" alt="#">
+                <img src="media/icon-logo.png" alt="logo">
             </div>
-            <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Temas</a>
-                <a href="#">Países</a>
-                <a href="#">Sobre Nosotros</a>
+            <button class="nav-toggle" id="navToggleOpen">
+                <i class="fa fa-bars"></i>
+            </button>
+            <nav id="nav">
+                <button class="nav-toggle close" id="navToggleClose">
+                    <i class="fa fa-close"></i>
+                </button>
+                <a id="redirection1" href="#inicio">Home</a>
+                <a id="redirection2" href="#temas">Topics</a>
+                <a id="redirection3" href="#">Countries</a>
+                <a id="redirection4" href="#description">About Us</a>
             </nav>
+
         </div>
     </header>
 
     <section id="hero">
-        <h1>DESCUBRÍ <br>EL MUNDO.</h1>
-        <form action="#">
-            <button>EMPEZAR</button>
-        </form>
+        <h1>DISCOVER <br>THE WORLD.</h1>
+        <a href="#temas">
+            <button>GET STARTED</button>
+        </a>
     </section>
 
     <section id="description">
         <div class="container">
-            
+            <div class="img-container"></div>
+            <div class="text">
+                <h2>A new way to discover the <span>world</span>.</h2>
+                <p>Let's get discover our world! Through the maps, we will learn curiosities about our world and the people who inhabit it.</p>
+                <a href="#"><button>+ INFO</button></a>
+            </div>
         </div>
     </section>
+
+    <section id="temas">
+        <div class="container">
+            <h2>CHOOSE A TOPIC</h2>
+            <div class="temas">
+                <a class="carta" href="#">Foods</a>
+                <a class="carta" href="#">Economy</a>
+                <a class="carta" href="#">Animals</a>
+                <a class="carta" href="#">Brands</a>
+                <a class="carta" href="#">Sports</a>
+                <a class="carta" href="#">Languages</a>
+                <a class="carta" href="#">History</a>
+                <a class="carta" href="#">Bands</a>
+                <a class="carta" href="#">Others</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Joel Mattieu</p>
+            <div class="redes">
+                <a href="https://github.com/joelmattieu" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/joelmattieu/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript.js"></script>
 </body>
 </html>
