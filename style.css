@@ -29,12 +29,12 @@ li{ font-size: 1.25em;}
     margin: auto;
 }
 
-header{
+nav{
     background-color: var(--color-crema);
     width: 100%;
 }
 
-header .container{
+nav .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,11 +42,11 @@ header .container{
     
 }
 
-header .logo{
+.logo{
     width: 50px;
 }
 
-header nav{
+.nav-links{
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -63,7 +63,7 @@ header nav{
 
 }
 
-header nav a{
+.nav-links a{
     text-decoration: none;
     background-image: linear-gradient(#1197cc, #1197cc);
     background-position: 0% 100%;
@@ -74,7 +74,7 @@ header nav a{
     line-height: 80px;
 }
 
-header nav a:hover, header nav a:focus{
+.nav-links a:hover, .nav-links a:focus{
     background-size: 100% 2px;
 }
 
@@ -98,13 +98,13 @@ header nav a:hover, header nav a:focus{
     pointer-events: all;
 }
 
-#hero{
+.hero{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 90vh;
+    height: 100vh;
     background-image: linear-gradient(0deg,
      rgba(0,0,0,.8),
      rgba(0,0,0,.8)),
@@ -115,12 +115,12 @@ header nav a:hover, header nav a:focus{
      background-attachment: fixed;
 }
 
-#hero h1{
+.hero h1{
     font-size: 3rem;
     color: var(--color-crema);
 }
 
-#hero button{
+.hero button{
     padding: 12px 18px;
     border: 1px solid rgba(0,0,0,.5);
     border-radius: 40px;
@@ -131,19 +131,19 @@ header nav a:hover, header nav a:focus{
 
 }
 
-#hero button:hover{
+.hero button:hover{
     background-color: #e8e8d1;
 }
 
-#description{
+.about-us{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color-crema);
-    min-height: 85vh;
+    height: 100vh;
 }
 
-#description .container{
+.about-us .container{
     padding: 150px 25px;
     display: flex;
     justify-content: center;
@@ -151,23 +151,23 @@ header nav a:hover, header nav a:focus{
     text-align: center;
 }
 
-#description h2{
+.about-us h2{
     color: var(--color-azul);
     font-weight: bold;
     font-size: 33px;
 
 }
 
-#description h2 span{
+.about-us h2 span{
     color: var(--color-rosa);
 }
 
-#description p{
+.about-us p{
     margin: 30px 0px;
     font-size: 18px;
 }
 
-#description button{
+.about-us button{
     color: white;
     background-color: #1197cc;
     box-shadow: #094c66 4px 4px 0px;
@@ -178,29 +178,29 @@ header nav a:hover, header nav a:focus{
     transition: transform 200ms, box-shadow 200ms;
 }
 
-#description button:active{
+.about-us button:active{
     transform: translateY(4px), translateX(4px);
     box-shadow: #094c66 0px 0px 0px;
 }
 
-#temas{
+.topics{
     background: rgb(30, 30, 30);
     color: rgb(255, 255, 255);
     text-align: center;
 }
 
-#temas .container{
+.topics .container{
     padding: 70px 25px;
 
 }
 
-#temas .container h2{
+.topics .container h2{
     font-size: 35px;
     color: var(--color-crema);
     margin-bottom: 30px;
 }
 
-#temas .container a{
+.topics .container a{
     text-decoration: none;
     color: #fff;
     font-size: 24px;
@@ -216,7 +216,7 @@ header nav a:hover, header nav a:focus{
     align-content: center;
 }
 
-#temas .container .carta{
+.carta{
     flex-basis: 320px;
     background-position: center center;
     background-size: cover;
@@ -353,7 +353,13 @@ footer .container .redes{
 }
 
 @media (min-width: 992px){
-    header nav{
+
+    nav{
+        position: fixed;
+        width: 100%;
+    }
+
+    .nav-links{
         position: static;
         opacity: 1;
         flex-direction: row;
@@ -362,13 +368,13 @@ footer .container .redes{
         
     }
 
-    header nav a{
+    .nav-links a{
         padding: 0 18px;
         font-size: 16px;
         line-height: 40px;
     }
 
-    header .logo{
+    .logo{
         width: 60px;
     }
 
@@ -376,16 +382,11 @@ footer .container .redes{
         display: none;
     }
 
-    #hero h1{
+    .hero h1{
         font-size: 3.75rem;
     }
 
-    header{
-        position: sticky;
-        top: 0;
-    }
-
-    #description .container{
+    .about-us .container{
         flex-direction: row;
         justify-content: space-between;
     }
@@ -405,12 +406,16 @@ footer .container .redes{
         padding: 30px;
     }
 
-    #description p{
+    .about-us p{
         margin-bottom: 60px;
     }
 
-    #description h2{
+    .about-us h2{
         margin-bottom: 45px;
+    }
+
+    .topics .container h2{
+        margin: 42.5px;
     }
     
     footer .container{
